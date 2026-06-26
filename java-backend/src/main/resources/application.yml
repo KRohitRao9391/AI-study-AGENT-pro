@@ -1,0 +1,34 @@
+server:
+  port: 5000
+  servlet:
+    session:
+      timeout: 24h
+
+spring:
+  application:
+    name: scholar-ai-java-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ScholarDB
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 123456789
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  session:
+    store-type: jdbc
+    timeout: 24h
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+logging:
+  level:
+    com.scholarai: DEBUG
+    org.springframework.security: DEBUG
+

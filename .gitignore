@@ -1,0 +1,5 @@
+node_modules/
+java-backend/target/
+.env
+.local/
+.git
